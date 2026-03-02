@@ -1,0 +1,2 @@
+# This file ensures the test directory is tracked by Git
+# Add your test images here (they will be ignored by .gitexcept for this file)
