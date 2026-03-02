@@ -65,7 +65,7 @@ Dog Breed Identification/
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/dovanminh-coder/dog-breed-identification.git
+git clone https://github.com/dovanminh100104-coder/dog-breed-identification.git
 cd dog-breed-identification
 ```
 
