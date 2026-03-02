@@ -216,10 +216,9 @@ weighted avg    0.76      0.76      0.75      2045
 
 ## 👨‍💻 Author
 
-- **Name**: [Your Name]
-- **Email**: [your.email@example.com]
-- **LinkedIn**: [linkedin.com/in/yourprofile]
-- **GitHub**: [github.com/yourusername]
+- **Name**: Đỗ Văn Minh
+- **Email**: dovanminh100104@gmail.com
+- **GitHub**: github.com/dovanminh100104-coder
 
 ## 📝 License
 
