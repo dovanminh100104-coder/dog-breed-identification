@@ -1,4 +1,4 @@
-# 🐕 Dog Breed AI: Professional Classifier
+# 🐕 DogBreedAI by DoVanMinh
 
 [![Accuracy](https://img.shields.io/badge/Accuracy-90%25-brightgreen)](https://github.com/dovanminh100104-coder/dog-breed-identification)
 [![Model](https://img.shields.io/badge/Model-EfficientNetB0-blue)](https://github.com/dovanminh100104-coder/dog-breed-identification)
