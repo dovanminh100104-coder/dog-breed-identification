@@ -1,0 +1,9 @@
+# This file ensures the models directory is tracked by Git
+# Trained models will be stored here after training
+# Example files that may be created:
+# - final_dog_breed_model.h5
+# - optimized_model.tflite
+# - dog_breed_model.tflite
+# - android_assets.zip
+# - ios_assets.zip
+# - mobile_deployment_package.zip

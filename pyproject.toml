@@ -1,0 +1,188 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dog-breed-identification"
+version = "2.0.0"
+description = "Deep Learning system for classifying 120 dog breeds with ensemble learning"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Đỗ Văn Minh", email = "dovanminh100104@gmail.com"}
+]
+maintainers = [
+    {name = "Đỗ Văn Minh", email = "dovanminh100104@gmail.com"}
+]
+keywords = [
+    "deep learning",
+    "computer vision", 
+    "image classification",
+    "dog breed identification",
+    "tensorflow",
+    "ensemble learning",
+    "machine learning",
+    "artificial intelligence"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "tensorflow>=2.13.0",
+    "keras>=2.13.1",
+    "opencv-python>=4.8.1.78",
+    "Pillow>=10.0.1",
+    "numpy>=1.24.3",
+    "pandas>=2.0.3",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.7.2",
+    "seaborn>=0.12.2",
+    "tqdm>=4.66.1",
+    "fastapi>=0.104.1",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+mobile = [
+    "tensorflow-model-optimization>=0.7.0",
+    "coremltools>=7.0.0",
+]
+docs = [
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/dovanminh100104-coder/dog-breed-identification"
+Documentation = "https://github.com/dovanminh100104-coder/dog-breed-identification/docs"
+Repository = "https://github.com/dovanminh100104-coder/dog-breed-identification.git"
+"Bug Tracker" = "https://github.com/dovanminh100104-coder/dog-breed-identification/issues"
+
+[project.scripts]
+dog-breed-train = "src.final_dog_breed_classifier:main"
+dog-breed-test = "src.test_model:main"
+dog-breed-api = "src.api_server:main"
+dog-breed-optimize = "src.model_optimizer:main"
+dog-breed-validate = "src.data_validator:main"
+dog-breed-mobile = "src.mobile_deployment:main"
+
+[tool.setuptools]
+packages = ["src"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"" = [
+    "config.py",
+    "requirements.txt",
+    "README.md",
+    "LICENSE",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tensorflow.*",
+    "keras.*",
+    "cv2.*",
+    "sklearn.*",
+    "matplotlib.*",
+    "seaborn.*",
+    "pandas.*",
+    "numpy.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "setup.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
