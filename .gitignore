@@ -205,6 +205,7 @@ models/*.pb
 
 results/*
 !results/.gitkeep
+!results/*.png
 
 logs/*
 !logs/.gitkeep

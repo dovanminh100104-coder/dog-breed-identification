@@ -26,6 +26,20 @@ A production-grade dog breed classification project featuring a highly optimized
 - **DevOps**: Docker, multi-layer containerization.
 - **Data**: Pandas, NumPy, OpenCV.
 
+## 📊 Visual Results & Performance
+
+### Model Predictions
+![Sample Predictions](results/result.png)
+*Figure 1: Sample classification results on various dog breeds with confidence scores.*
+
+### Training Metrics
+![Accuracy Metrics](results/accuracy.png)
+*Figure 2: Training accuracy, distribution, and performance analysis.*
+
+### Web Interface
+![Web UI](results/test_app.png)
+*Figure 3: Modern Glassmorphism Web Interface for real-time dog breed identification.*
+
 ## 📂 Project Structure
 
 ```text
