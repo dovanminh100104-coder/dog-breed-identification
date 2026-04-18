@@ -6,6 +6,8 @@
 [![WebApp](https://img.shields.io/badge/Web_App-Flask-lightgrey)](https://github.com/dovanminh100104-coder/dog-breed-identification)
 [![Docker](https://img.shields.io/badge/Docker-Supported-cyan)](https://github.com/dovanminh100104-coder/dog-breed-identification)
 
+> **Tags:** `deep-learning`, `dog-breed-identification`, `flask-web-app`, `computer-vision`, `efficientnet`, `tensorflow-keras`, `image-classification`, `python-ai`, `dockerized-app`.
+
 A production-grade dog breed classification project featuring a highly optimized **EfficientNetB0** model achieving **~90% accuracy** across 120 breeds. This repository includes a full-stack Flask web application with a modern Glassmorphism UI, real-time inference, and Docker containerization.
 
 ## 🚀 Key Features
